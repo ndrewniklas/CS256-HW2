@@ -1,6 +1,6 @@
 // Andrew Niklas
 // Homework 2
-// Completed 1/27/2016
+// Completed 1/20/2016
 
 #include <iostream>
 #include <cmath>
