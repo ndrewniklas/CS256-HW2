@@ -38,9 +38,9 @@ double stdDev(double values[], int size){
 
 int main(){
 	for(int i = 0; i < size; i++){
-		std::cout << "input a double value: ";
+		std::cout << "input double value " << i+1 << ": ";
 		std::cin >> values[i];
 	}
-	std::cout << "The Standard Deviation of the entered values is: ";
+	std::cout << "\nThe Standard Deviation of the entered values is: ";
 	std::cout << stdDev(values, size) << std::endl;
 }
