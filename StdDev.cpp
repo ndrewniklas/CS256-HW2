@@ -5,15 +5,15 @@
 #include <iostream>
 #include <cmath>
 
-double sum(double&[], int);
-double mean(double&[], int);
-double stdDev(double&[], int);
+double sum(double[], int);
+double mean(double[], int);
+double stdDev(double[], int);
 
 double values[10];
 int size = 10;
 double difSqrd[10];
 
-double sum(double& values[], int size){
+double sum(double values[], int size){
 	double x = 0;
 	for(int i = 0; i < size; i++){
 		x += values[i];
@@ -21,19 +21,19 @@ double sum(double& values[], int size){
 	return x;
 }
 
-double mean(double& values[], int size){
+double mean(double values[], int size){
 	return sum(values, size)/size;
 }
 
-double stdDev(double& values[], int size){
-	double mean = mean(values, size);
+double stdDev(double values[], int size){
+	double avg = mean(values, size);
 	for(int i = 0; i < size; i++){
-		difSqrd[i] = (values[i] - mean);
+		difSqrd[i] = (values[i] - avg);
 	}
 	for(int i = 0; i < size; i++){
 		difSqrd[i] = pow(difSqrd[i], 2);
 	}
-	return sqrt(mean(difSqrd,size))
+	return sqrt(mean(difSqrd,size));
 }
 
 int main(){
